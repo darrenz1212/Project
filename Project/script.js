@@ -48,3 +48,30 @@ function setupMap(center){
     // }), 'top-right');
     // =========== tombol di kanan atas ===========
 }
+
+// ===================== Animasi web =====================
+function fadeIn() {
+    var news = document.querySelector(".news");
+    var safeArea = document.querySelector(".safe-area");
+    var survive = document.querySelector(".survive");
+    var newsPosition = news.getBoundingClientRect().top;
+    var safeAreaPosition = safeArea.getBoundingClientRect().top;
+    var survivePosition = survive.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.3;
+
+    if (newsPosition < screenPosition) {
+        news.classList.add("fade-in");
+    }
+
+    if (safeAreaPosition < screenPosition) {
+        safeArea.classList.add("fade-in");
+    }
+
+    if (survivePosition < screenPosition) {
+        survive.classList.add("fade-in");
+    }
+}
+
+window.addEventListener("scroll", fadeIn);
+//===================== Animasi web =====================
+AOS.init()
