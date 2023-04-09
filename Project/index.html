@@ -9,17 +9,17 @@
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Patron</title>
 </head>
 <body>
     <header>
+    <!-- ====== Navbar ===== -->
         <nav>
           <div class="logo">
             <img src="logo.jpeg">
           </div>
-          <div class="nama">
-            <h2>Patron</h2>
-          </div>
+          
           <div class="items">
             <a href="#item1">Evacuation</a>
             <a href="#item2">Latest News</a>
@@ -28,6 +28,7 @@
             <a href="#item5">About us</a>
           </div>      
         </nav>
+    <!-- ====== Navbar ===== -->
       </header>
       
       <!-- Hero Section -->
@@ -42,7 +43,7 @@
       </section>
 
       <!--News-->
-      <section id="item2">
+      <section id="item2" class="news">
         <div class="kolom-news">
           <div class="desk-news">
             <h2 class="latest">Latest News</h2>
@@ -55,7 +56,7 @@
       </section>
 
       <!--Safe Area-->
-      <section id="item3">
+      <section id="item3" data-AOS="fade-up" data-aos-duration="1500">
         <div class="kolom-area">
           <div class="desk-area">
             <img src="logo.jpeg">
@@ -66,7 +67,7 @@
       </section>
 
       <!--Survive-->
-      <section id="item4">
+      <section id="item4" data-AOS="fade-right" data-aos-duration="3000">
         <div class="kolom-survive">
           <div class="desk-survive">
             <img src="perpus.jpeg">
@@ -77,19 +78,20 @@
         </div>
       </section>
 
-      <!--about us-->
-      <section id="item5">
-        <div class="kolom-about">
-          <div class="desk-about">
-            <img src="sohee.jpg">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi alias laborum quia asperiores earum quidem eaque vero quod nisi debitis, dolorum, totam, praesentium aliquid minus aspernatur error consequuntur nobis assumenda?</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, dolorem molestias! Eius dolore provident obcaecati alias optio. Tempora reiciendis, dolor assumenda labore, alias natus deserunt aut veritatis qui, officia explicabo.</p>
-          </div>
-        </div>
-      </section>
+      <!-- Footer  -->
+  
+      <footer id="item5" class="footer">
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, magni voluptatibus illum velit doloremque vero placeat quis commodi blanditiis, laudantium ipsa incidunt consectetur ex amet molestias vel nostrum, repudiandae rerum!</h3>
+      </footer>
     </div>
       <!-- Hero Section Ends -->
   <script src="script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+  <!-- ============================== AOS ============================== -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- ============================== AOS ============================== -->
+  
 </body>
 </html>
